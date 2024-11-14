@@ -1,13 +1,11 @@
-require 'open-uri'
-require 'nokogiri'
 require './price_logger.rb'
-# url = 'https://www.tradingview.com/symbols/NASDAQ-QQQ/'
 
-logger = PriceLogger.new('QQQ', true)
+stocks = ['QQQ', 'SPY']
+
+logger = PriceLogger.new(stocks, true)
 
 loop do
-  logger.log_price
-  sleep 10
+  stocks.each {|stock| logger.log_price(stock)}
 end
 
 
