@@ -1,2 +1,5 @@
-stocks
+# Ignore the stocks directory
+stocks/
+
+# Ignore Gemfile.lock
 Gemfile.lock
